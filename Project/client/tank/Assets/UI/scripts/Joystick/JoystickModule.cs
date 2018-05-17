@@ -136,7 +136,7 @@ public class JoystickModule : BaseEvent
 			_thumb.SetXY(thumbX, thumbY);
 
 			this.onMove.Call(degree);
-            BaseEvent.Instance.TriggerEvent(GlobleEventDefine.Role.ROLE_MOVE_DIRECTION, rad);
+            BaseEvent.Instance.TriggerEvent(GlobleEventDefine.Player.PLAYER_MOVE_DIRECTION, rad);
         }
 	}
 
@@ -159,7 +159,7 @@ public class JoystickModule : BaseEvent
 			);
 
 			this.onEnd.Call();            
-            BaseEvent.Instance.TriggerEvent(GlobleEventDefine.Role.ROLE_MOVE_END);
+            BaseEvent.Instance.TriggerEvent(GlobleEventDefine.Player.PLAYER_MOVE_END);
         }
 	}
 

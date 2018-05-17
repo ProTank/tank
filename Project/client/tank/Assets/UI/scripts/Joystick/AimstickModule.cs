@@ -70,7 +70,7 @@ public class AimstickModule : EventDispatcher {
 			_startStageX = bx;
 			_startStageY = by;
 
-			Debug.Log ("bsx= " + bx + " bsy= " + by);
+			//Debug.Log ("bsx= " + bx + " bsy= " + by);
 
 			context.CaptureTouch();
 		}
@@ -87,14 +87,17 @@ public class AimstickModule : EventDispatcher {
 
 			float offsetX = bx - _startStageX;
 			float offsetY = by - _startStageY;
+            _startStageX = bx;
+            _startStageY = by;
 
-			Debug.Log ("sx= " + _startStageX + " sy= " + _startStageY);
-			Debug.Log ("mbx= " + bx + " mby= " + by);
-			Debug.Log ("ox= " + offsetX + " oy= " + offsetY);
+            //Debug.Log ("sx= " + _startStageX + " sy= " + _startStageY);
+            //Debug.Log ("mbx= " + bx + " mby= " + by);
+            //Debug.Log("offsetX= " + offsetX + " offsetY= " + offsetY);
 
-			Vector2 offsetTo = new Vector2 (offsetX/_areaWidth*30, offsetY/_areaHeight*30);
+            Vector2 offsetTo = new Vector2 (offsetX/_areaWidth*30, offsetY/_areaHeight*30);
 
 			this.onMove.Call(offsetTo);
+            BaseEvent.Instance.TriggerEvent(GlobleEventDefine.Player.PLAYER_TOWARDS_DIRECTION, offsetTo);
 		}
 	}
 
@@ -105,6 +108,7 @@ public class AimstickModule : EventDispatcher {
 		{
 			_touchId = -1;
 			this.onEnd.Call();
-		}
+            BaseEvent.Instance.TriggerEvent(GlobleEventDefine.Player.PLAYER_TOWARDS_END);
+        }
 	}
 }

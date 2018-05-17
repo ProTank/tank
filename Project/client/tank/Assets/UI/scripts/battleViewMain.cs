@@ -14,6 +14,15 @@ public class battleViewMain : MonoBehaviour
 	JoystickModule _movestick;
 	AimstickModule _aimstick;
 
+    RoleManager mRoleManager;
+
+    void Awake()
+    {
+        mRoleManager = new RoleManager();
+        mRoleManager.EnterScene();
+    }
+
+
 	void Start () {
 
 		Application.targetFrameRate = 60;
