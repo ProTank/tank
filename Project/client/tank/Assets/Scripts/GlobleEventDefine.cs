@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GlobleEventDefine
 {
-    public class Role
+    public class Player
     {
-        public static string ROLE_MOVE_DIRECTION = "Role.MoveDirection";
-        public static string ROLE_MOVE_END = "Role.MoveEnd";
+        public static string PLAYER_MOVE_DIRECTION = "Player.MoveDirection";
+        public static string PLAYER_MOVE_END = "Player.MoveEnd";
+        public static string PLAYER_TOWARDS_DIRECTION = "Player.TowardsDirection";
+        public static string PLAYER_TOWARDS_END = "Player.TowardsEnd";
     }
 
 }

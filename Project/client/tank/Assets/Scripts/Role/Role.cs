@@ -5,29 +5,54 @@ using FairyGUI;
 
 public class Role : MonoBehaviour
 {
+    protected Animator mAC;
     private CharacterController mCC;
+    protected Camera mMainCamera;
 
-    private bool mMoving;
-    private Vector3 mMoveDirection;
+    protected bool mMoving = false;
+    protected Vector3 mMoveDirection;
+
+    protected bool mRotating = false;
+    private float mRotateSpeed = 20;
+    protected Vector2 mRotateDegree; 
 
     private float mMoveSpeed = 10;
     private float mGravity = 20;
 
+    private float mCameraDistance = 10;
+    private float mCameraDegree = 40;
+    private float mSmoothing = 5f;
+
+    public virtual void RegisterEvent() { }
+    public virtual void RemoveEvent() { }
+
     void Awake()
     {
+        mAC = GetComponent<Animator>();
         mCC = GetComponent<CharacterController>();
+        mMainCamera = Camera.main;
     }
 
     // Use this for initialization
     void Start()
     {
         RegisterEvent();
+        InitRole();
+        InitCamera();
     }
 
-    void RegisterEvent()
+    void InitRole()
     {
-        BaseEvent.Instance.RegisterEvent(GlobleEventDefine.Role.ROLE_MOVE_DIRECTION, Move);
-        BaseEvent.Instance.RegisterEvent(GlobleEventDefine.Role.ROLE_MOVE_END, MoveEnd);
+        transform.localEulerAngles = new Vector3(0, 0, 0);
+    }
+
+    void InitCamera()
+    {
+        Vector3 rolePos = transform.position;
+        float offsetH = mCameraDistance * Mathf.Cos(Mathf.PI * mCameraDegree / 180);
+        float offsetV = mCameraDistance * Mathf.Sin(Mathf.PI * mCameraDegree / 180);
+        mMainCamera.transform.position = new Vector3(rolePos.x, rolePos.y + offsetV, rolePos.z - offsetH);
+        mMainCamera.transform.localEulerAngles = transform.localEulerAngles + new Vector3(mCameraDegree, 0, 0);
     }
 
     // Update is called once per frame
@@ -46,20 +71,34 @@ public class Role : MonoBehaviour
         mCC.Move(direction);
     }
 
-    void Move(EventContext context)
+    void FixedUpdate()
     {
-        float rad = (float)context.data;
-        //MyLog.LogError("onMoveDir:" + rad);
-        float x = Mathf.Cos(rad);
-        float z = -Mathf.Sin(rad);
-        mMoveDirection = new Vector3(x, 0, z);
-        mMoving = true;
+        if (!mRotating)
+        {
+            Vector3 rolePos = transform.position;
+            float offsetH = mCameraDistance * Mathf.Cos(Mathf.PI * mCameraDegree / 180);
+            float offsetV = mCameraDistance * Mathf.Sin(Mathf.PI * mCameraDegree / 180);
+            Vector3 targetCampos = new Vector3(rolePos.x, rolePos.y + offsetV, rolePos.z - offsetH);
+            mMainCamera.transform.position = Vector3.Lerp(mMainCamera.transform.position, targetCampos, mSmoothing * Time.deltaTime);
+            mMainCamera.transform.localEulerAngles = transform.localEulerAngles + new Vector3(mCameraDegree, 0, 0);
+        }
+        else
+        {
+            if (mRotateDegree == Vector2.zero)
+                return;
+            Vector3 vec = mMainCamera.transform.localEulerAngles;
+            vec.x = 0;
+            mMainCamera.transform.localEulerAngles = vec;
+            mMainCamera.transform.Rotate(-mRotateDegree.x * Time.deltaTime * mRotateSpeed, mRotateDegree.y * Time.deltaTime * mRotateSpeed, 0);
+            //Debug.LogError("angle:" + mMainCamera.transform.localEulerAngles + ", mRotateDegree:" + mRotateDegree);
+            mRotateDegree = Vector2.zero;
+            mMainCamera.transform.localEulerAngles += new Vector3(mCameraDegree, 0, 0);
+        }
     }
 
-    void MoveEnd(EventContext context)
+    void OnDestroy()
     {
-        mMoving = false;
-        mMoveDirection = Vector3.zero;
+        RemoveEvent();        
     }
 
 }
