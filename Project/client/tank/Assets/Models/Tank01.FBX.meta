@@ -1,0 +1,597 @@
+fileFormatVersion: 2
+guid: c2695a0a302646f46b7d874ffa3cb34c
+timeCreated: 1526263724
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone001
+    100002: Bone002
+    100004: Bone003
+    100006: Bone004
+    100008: Bone005
+    100010: Bone006
+    100012: Bone007
+    100014: Bone008
+    100016: Bone009
+    100018: Bone010
+    100020: Bone011
+    100022: Bone012
+    100024: Bone013
+    100026: Bone014
+    100028: Bone015
+    100030: Bone016
+    100032: Bone017
+    100034: Bone018
+    100036: Bone019
+    100038: Bone020
+    100040: Bone021
+    100042: Bone022
+    100044: Bone023
+    100046: Bone024
+    100048: Bone025
+    100050: Bone026
+    100052: Bone027
+    100054: Bone028
+    100056: Bone029
+    100058: Bone030
+    100060: Bone031
+    100062: Bone032
+    100064: Bone033
+    100066: Bone034
+    100068: Bone035
+    100070: Bone036
+    100072: Bone037
+    100074: Bone038
+    100076: Bone039
+    100078: Bone040
+    100080: Bone041
+    100082: Bone042
+    100084: Bone043
+    100086: Bone044
+    100088: Bone045
+    100090: Bone046
+    100092: Bone047
+    100094: Bone048
+    100096: Bone049
+    100098: Bone050
+    100100: Bone051
+    100102: Bone052
+    100104: Bone053
+    100106: Bone054
+    100108: Bone055
+    100110: Bone056
+    100112: Bone057
+    100114: Bone058
+    100116: Bone059
+    100118: Bone060
+    100120: Dummy001
+    100122: Dummy002
+    100124: Dummy003
+    100126: Dummy004
+    100128: Dummy005
+    100130: Dummy006
+    100132: Dummy007
+    100134: Dummy008
+    100136: Dummy009
+    100138: Dummy010
+    100140: IK Chain001
+    100142: IK Chain002
+    100144: IK Chain003
+    100146: Line001
+    100148: Line002
+    100150: Point001
+    100152: Point002
+    100154: Point003
+    100156: Point004
+    100158: Point005
+    100160: Point006
+    100162: Point007
+    100164: Point008
+    100166: Point009
+    100168: Point010
+    100170: Point011
+    100172: Point012
+    100174: Point013
+    100176: Point014
+    100178: Point015
+    100180: Point016
+    100182: Point017
+    100184: Point018
+    100186: Point019
+    100188: Point020
+    100190: Point021
+    100192: Point022
+    100194: Point023
+    100196: Point024
+    100198: Point025
+    100200: Point026
+    100202: Point027
+    100204: Point028
+    100206: Point029
+    100208: Point030
+    100210: Point031
+    100212: Point032
+    100214: Point033
+    100216: Point034
+    100218: Point035
+    100220: Point036
+    100222: Point037
+    100224: Point038
+    100226: Point039
+    100228: Point040
+    100230: Point041
+    100232: Point042
+    100234: Point043
+    100236: Point044
+    100238: SciFi Ultra Tank 1.003
+    100240: //RootNode
+    400000: Bone001
+    400002: Bone002
+    400004: Bone003
+    400006: Bone004
+    400008: Bone005
+    400010: Bone006
+    400012: Bone007
+    400014: Bone008
+    400016: Bone009
+    400018: Bone010
+    400020: Bone011
+    400022: Bone012
+    400024: Bone013
+    400026: Bone014
+    400028: Bone015
+    400030: Bone016
+    400032: Bone017
+    400034: Bone018
+    400036: Bone019
+    400038: Bone020
+    400040: Bone021
+    400042: Bone022
+    400044: Bone023
+    400046: Bone024
+    400048: Bone025
+    400050: Bone026
+    400052: Bone027
+    400054: Bone028
+    400056: Bone029
+    400058: Bone030
+    400060: Bone031
+    400062: Bone032
+    400064: Bone033
+    400066: Bone034
+    400068: Bone035
+    400070: Bone036
+    400072: Bone037
+    400074: Bone038
+    400076: Bone039
+    400078: Bone040
+    400080: Bone041
+    400082: Bone042
+    400084: Bone043
+    400086: Bone044
+    400088: Bone045
+    400090: Bone046
+    400092: Bone047
+    400094: Bone048
+    400096: Bone049
+    400098: Bone050
+    400100: Bone051
+    400102: Bone052
+    400104: Bone053
+    400106: Bone054
+    400108: Bone055
+    400110: Bone056
+    400112: Bone057
+    400114: Bone058
+    400116: Bone059
+    400118: Bone060
+    400120: Dummy001
+    400122: Dummy002
+    400124: Dummy003
+    400126: Dummy004
+    400128: Dummy005
+    400130: Dummy006
+    400132: Dummy007
+    400134: Dummy008
+    400136: Dummy009
+    400138: Dummy010
+    400140: IK Chain001
+    400142: IK Chain002
+    400144: IK Chain003
+    400146: Line001
+    400148: Line002
+    400150: Point001
+    400152: Point002
+    400154: Point003
+    400156: Point004
+    400158: Point005
+    400160: Point006
+    400162: Point007
+    400164: Point008
+    400166: Point009
+    400168: Point010
+    400170: Point011
+    400172: Point012
+    400174: Point013
+    400176: Point014
+    400178: Point015
+    400180: Point016
+    400182: Point017
+    400184: Point018
+    400186: Point019
+    400188: Point020
+    400190: Point021
+    400192: Point022
+    400194: Point023
+    400196: Point024
+    400198: Point025
+    400200: Point026
+    400202: Point027
+    400204: Point028
+    400206: Point029
+    400208: Point030
+    400210: Point031
+    400212: Point032
+    400214: Point033
+    400216: Point034
+    400218: Point035
+    400220: Point036
+    400222: Point037
+    400224: Point038
+    400226: Point039
+    400228: Point040
+    400230: Point041
+    400232: Point042
+    400234: Point043
+    400236: Point044
+    400238: SciFi Ultra Tank 1.003
+    400240: //RootNode
+    2300000: Line001
+    2300002: Line002
+    3300000: Line001
+    3300002: Line002
+    4300000: SciFi Ultra Tank 1.003
+    4300002: Line001
+    4300004: Line002
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SciFi Ultra Tank 1.003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone001
+        weight: 1
+      - path: Bone001/Bone002
+        weight: 1
+      - path: Bone001/Bone002/Bone003
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015/Bone016
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015/Bone016/Bone017
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015/Bone016/Bone017/Bone018
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015/Bone016/Bone017/Bone018/Bone019
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015/Bone016/Bone017/Bone018/Bone019/Bone020
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015/Bone016/Bone017/Bone018/Bone019/Bone020/Bone021
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015/Bone016/Bone017/Bone018/Bone019/Bone020/Bone021/Bone022
+        weight: 1
+      - path: Bone001/Bone002/Bone003/Bone004/Bone005/Bone006/Bone007/Bone008/Bone009/Bone010/Bone011/Bone012/Bone013/Bone014/Bone015/Bone016/Bone017/Bone018/Bone019/Bone020/Bone021/Bone022/Bone023
+        weight: 1
+      - path: Bone027
+        weight: 1
+      - path: Bone027/Bone028
+        weight: 1
+      - path: Bone027/Bone028/Bone029
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048
+        weight: 1
+      - path: Bone027/Bone028/Bone029/Bone030/Bone031/Bone032/Bone033/Bone034/Bone035/Bone036/Bone037/Bone038/Bone039/Bone040/Bone041/Bone042/Bone043/Bone044/Bone045/Bone046/Bone047/Bone048/Bone049
+        weight: 1
+      - path: Dummy001
+        weight: 1
+      - path: Dummy001/Bone053
+        weight: 1
+      - path: Dummy001/Bone053/Dummy008
+        weight: 1
+      - path: Dummy001/Bone053/Dummy008/Bone054
+        weight: 1
+      - path: Dummy001/Bone053/Dummy008/Bone054/Dummy009
+        weight: 1
+      - path: Dummy001/Bone053/Dummy008/Bone054/Dummy009/Bone055
+        weight: 1
+      - path: Dummy001/Bone053/Dummy010
+        weight: 1
+      - path: Dummy001/Bone053/Dummy010/Bone056
+        weight: 1
+      - path: Dummy001/Bone053/Dummy010/Bone056/Bone057
+        weight: 1
+      - path: Dummy001/Bone053/Dummy010/Bone056/Bone057/Bone058
+        weight: 1
+      - path: Dummy001/Bone053/Dummy010/Bone056/Bone057/Bone058/Bone059
+        weight: 1
+      - path: Dummy001/Bone053/Dummy010/Bone056/Bone057/Bone058/Bone059/Bone060
+        weight: 1
+      - path: Dummy001/Dummy002
+        weight: 1
+      - path: Dummy001/Dummy002/Bone025
+        weight: 1
+      - path: Dummy001/Dummy003
+        weight: 1
+      - path: Dummy001/Dummy003/Bone026
+        weight: 1
+      - path: Dummy001/Dummy004
+        weight: 1
+      - path: Dummy001/Dummy004/Bone024
+        weight: 1
+      - path: Dummy001/Dummy005
+        weight: 1
+      - path: Dummy001/Dummy005/Bone051
+        weight: 1
+      - path: Dummy001/Dummy006
+        weight: 1
+      - path: Dummy001/Dummy006/Bone052
+        weight: 1
+      - path: Dummy001/Dummy007
+        weight: 1
+      - path: Dummy001/Dummy007/Bone050
+        weight: 1
+      - path: Dummy001/Point001
+        weight: 1
+      - path: Dummy001/Point001/Point002
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014/Point015
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014/Point015/Point016
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014/Point015/Point016/Point017
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014/Point015/Point016/Point017/Point018
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014/Point015/Point016/Point017/Point018/Point019
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014/Point015/Point016/Point017/Point018/Point019/Point020
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014/Point015/Point016/Point017/Point018/Point019/Point020/Point021
+        weight: 1
+      - path: Dummy001/Point001/Point002/Point003/Point004/Point005/Point006/Point007/Point008/Point009/Point010/Point011/Point012/Point013/Point014/Point015/Point016/Point017/Point018/Point019/Point020/Point021/Point022
+        weight: 1
+      - path: Dummy001/Point023
+        weight: 1
+      - path: Dummy001/Point023/Point024
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036/Point037
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036/Point037/Point038
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036/Point037/Point038/Point039
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036/Point037/Point038/Point039/Point040
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036/Point037/Point038/Point039/Point040/Point041
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036/Point037/Point038/Point039/Point040/Point041/Point042
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036/Point037/Point038/Point039/Point040/Point041/Point042/Point043
+        weight: 1
+      - path: Dummy001/Point023/Point024/Point025/Point026/Point027/Point028/Point029/Point030/Point031/Point032/Point033/Point034/Point035/Point036/Point037/Point038/Point039/Point040/Point041/Point042/Point043/Point044
+        weight: 1
+      - path: IK Chain001
+        weight: 1
+      - path: IK Chain002
+        weight: 1
+      - path: IK Chain003
+        weight: 1
+      - path: Line001
+        weight: 1
+      - path: Line002
+        weight: 1
+      - path: SciFi Ultra Tank 1.003
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

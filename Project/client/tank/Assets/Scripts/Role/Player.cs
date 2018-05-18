@@ -24,11 +24,7 @@ public class Player : Role
 
     void Move(EventContext context)
     {
-        float rad = (float)context.data;
-        //MyLog.LogError("onMoveDir:" + rad);
-        float x = Mathf.Cos(rad);
-        float z = -Mathf.Sin(rad);
-        mMoveDirection = new Vector3(x, 0, z);        
+        mMoveDegree = (float)context.data;       
         mMoving = true;
         mAC.SetInteger("State", 1);
     }
@@ -36,7 +32,6 @@ public class Player : Role
     void MoveEnd(EventContext context)
     {
         mMoving = false;
-        mMoveDirection = Vector3.zero;
         mAC.SetInteger("State", 0);
     }
 
@@ -44,8 +39,8 @@ public class Player : Role
     {
         mRotating = true;
         Vector2 vec = (Vector2)context.data;
-        //Debug.LogError("vec:" + vec);
-        mRotateDegree += new Vector2(vec.y, vec.x);
+        mRotateDistance += new Vector2(vec.x, vec.y);
+        //Debug.LogError("mRotateDistance:" + mRotateDistance);
     }
 
     void RotateEnd(EventContext context)

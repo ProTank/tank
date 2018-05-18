@@ -10,16 +10,17 @@ public class Role : MonoBehaviour
     protected Camera mMainCamera;
 
     protected bool mMoving = false;
-    protected Vector3 mMoveDirection;
+    protected float mMoveDegree;
 
     protected bool mRotating = false;
-    private float mRotateSpeed = 20;
-    protected Vector2 mRotateDegree; 
+    private float mRotateSpeed = 10;
+    protected Vector2 mRotateDistance; 
 
     private float mMoveSpeed = 10;
     private float mGravity = 20;
 
-    private float mCameraDistance = 10;
+    private float mCameraDistanceV = 40;
+    private float mCameraDistanceH = 10;
     private float mCameraDegree = 40;
     private float mSmoothing = 5f;
 
@@ -38,7 +39,7 @@ public class Role : MonoBehaviour
     {
         RegisterEvent();
         InitRole();
-        InitCamera();
+        UpdateCamera();
     }
 
     void InitRole()
@@ -46,12 +47,14 @@ public class Role : MonoBehaviour
         transform.localEulerAngles = new Vector3(0, 0, 0);
     }
 
-    void InitCamera()
+    void UpdateCamera()
     {
         Vector3 rolePos = transform.position;
-        float offsetH = mCameraDistance * Mathf.Cos(Mathf.PI * mCameraDegree / 180);
-        float offsetV = mCameraDistance * Mathf.Sin(Mathf.PI * mCameraDegree / 180);
-        mMainCamera.transform.position = new Vector3(rolePos.x, rolePos.y + offsetV, rolePos.z - offsetH);
+        float degree = 90 - transform.localEulerAngles.y;
+        float x = rolePos.x - mCameraDistanceH * Mathf.Cos(degree * Mathf.PI / 180);
+        float z = rolePos.z - mCameraDistanceH * Mathf.Sin(degree * Mathf.PI / 180);
+        Vector3 targetCampos = new Vector3(x, rolePos.y + mCameraDistanceH, z);
+        mMainCamera.transform.position = Vector3.Lerp(mMainCamera.transform.position, targetCampos, mSmoothing * Time.deltaTime);
         mMainCamera.transform.localEulerAngles = transform.localEulerAngles + new Vector3(mCameraDegree, 0, 0);
     }
 
@@ -60,40 +63,32 @@ public class Role : MonoBehaviour
     {
         Vector3 direction = Vector3.zero;
         if (mMoving)
-        {            
+        {
             if (mCC.isGrounded)
             {
-                direction = mMoveDirection * mMoveSpeed * Time.deltaTime;                
-            }            
+                float rotDegree = mMoveDegree + 90;
+                float offsetX = Mathf.Sin((rotDegree) * Mathf.PI / 180);
+                float offsetZ = Mathf.Cos((rotDegree) * Mathf.PI / 180);
+                direction = new Vector3(offsetX, 0, offsetZ) * mMoveSpeed * Time.deltaTime;
+            }
         }
         direction.y -= mGravity * Time.deltaTime;
         direction = transform.TransformDirection(direction);
         mCC.Move(direction);
+
+        if (mRotating)
+        {
+            Vector3 rot = transform.localEulerAngles;
+            rot += new Vector3(0, mRotateSpeed * mRotateDistance.x * Time.deltaTime, 0);
+            transform.localEulerAngles = rot;
+            mCameraDegree += mRotateSpeed * mRotateDistance.y * Time.deltaTime;
+            mRotateDistance = Vector2.zero;
+        }
     }
 
     void FixedUpdate()
     {
-        if (!mRotating)
-        {
-            Vector3 rolePos = transform.position;
-            float offsetH = mCameraDistance * Mathf.Cos(Mathf.PI * mCameraDegree / 180);
-            float offsetV = mCameraDistance * Mathf.Sin(Mathf.PI * mCameraDegree / 180);
-            Vector3 targetCampos = new Vector3(rolePos.x, rolePos.y + offsetV, rolePos.z - offsetH);
-            mMainCamera.transform.position = Vector3.Lerp(mMainCamera.transform.position, targetCampos, mSmoothing * Time.deltaTime);
-            mMainCamera.transform.localEulerAngles = transform.localEulerAngles + new Vector3(mCameraDegree, 0, 0);
-        }
-        else
-        {
-            if (mRotateDegree == Vector2.zero)
-                return;
-            Vector3 vec = mMainCamera.transform.localEulerAngles;
-            vec.x = 0;
-            mMainCamera.transform.localEulerAngles = vec;
-            mMainCamera.transform.Rotate(-mRotateDegree.x * Time.deltaTime * mRotateSpeed, mRotateDegree.y * Time.deltaTime * mRotateSpeed, 0);
-            //Debug.LogError("angle:" + mMainCamera.transform.localEulerAngles + ", mRotateDegree:" + mRotateDegree);
-            mRotateDegree = Vector2.zero;
-            mMainCamera.transform.localEulerAngles += new Vector3(mCameraDegree, 0, 0);
-        }
+        UpdateCamera();
     }
 
     void OnDestroy()
