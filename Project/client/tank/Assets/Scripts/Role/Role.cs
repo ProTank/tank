@@ -14,18 +14,18 @@ public class Role : MonoBehaviour
 
     protected bool mRotating = false;
     private float mRotateSpeed = 10;
-    protected Vector2 mRotateDistance; 
+    protected Vector2 mRotateDistance;
+    protected float mCameraDegree = 30;
 
-    private float mMoveSpeed = 10;
-    private float mGravity = 20;
-
-    private float mCameraDistanceV = 40;
-    private float mCameraDistanceH = 10;
-    private float mCameraDegree = 40;
-    private float mSmoothing = 5f;
+    private float mMoveSpeed = 5;
+    private float mGravity = 20;    
 
     public virtual void RegisterEvent() { }
     public virtual void RemoveEvent() { }
+    
+    public virtual void OnFixedUpdate() { }
+
+    public virtual void OnInitRole() { }
 
     void Awake()
     {
@@ -38,25 +38,8 @@ public class Role : MonoBehaviour
     void Start()
     {
         RegisterEvent();
-        InitRole();
-        UpdateCamera();
-    }
-
-    void InitRole()
-    {
-        transform.localEulerAngles = new Vector3(0, 0, 0);
-    }
-
-    void UpdateCamera()
-    {
-        Vector3 rolePos = transform.position;
-        float degree = 90 - transform.localEulerAngles.y;
-        float x = rolePos.x - mCameraDistanceH * Mathf.Cos(degree * Mathf.PI / 180);
-        float z = rolePos.z - mCameraDistanceH * Mathf.Sin(degree * Mathf.PI / 180);
-        Vector3 targetCampos = new Vector3(x, rolePos.y + mCameraDistanceH, z);
-        mMainCamera.transform.position = Vector3.Lerp(mMainCamera.transform.position, targetCampos, mSmoothing * Time.deltaTime);
-        mMainCamera.transform.localEulerAngles = transform.localEulerAngles + new Vector3(mCameraDegree, 0, 0);
-    }
+        OnInitRole();
+    }  
 
     // Update is called once per frame
     void Update()
@@ -88,7 +71,7 @@ public class Role : MonoBehaviour
 
     void FixedUpdate()
     {
-        UpdateCamera();
+        OnFixedUpdate();
     }
 
     void OnDestroy()

@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using FairyGUI;
 
-public class battleViewMain : MonoBehaviour
+public class battleViewMain : WindowInfo
 {
-
-    GComponent _mainView;
     GComponent _moveStickView;
     GComponent _aimStickView;
 
@@ -13,32 +11,24 @@ public class battleViewMain : MonoBehaviour
 
     RoleManager mRoleManager;
 
-    void Awake()
+    public override void InitComponnet()
+    {
+        _moveStickView = mView.GetChild("moveStick").asCom;
+        _movestick = new JoystickModule(_moveStickView);
+
+        _aimStickView = mView.GetChild("aimStick").asCom;
+        _aimstick = new AimstickModule(_aimStickView);
+    }
+
+    public override void OnStart()
     {
         mRoleManager = new RoleManager();
         mRoleManager.EnterScene();
     }
 
-
-    void Start()
+    public override void OnReshow()
     {
-        Application.targetFrameRate = 60;
-        Stage.inst.onKeyDown.Add(OnKeyDown);
-
-        _mainView = this.GetComponent<UIPanel>().ui;
-
-        _moveStickView = _mainView.GetChild("moveStick").asCom;
-        _movestick = new JoystickModule(_moveStickView);
-
-        _aimStickView = _mainView.GetChild("aimStick").asCom;
-        _aimstick = new AimstickModule(_aimStickView);
+        mRoleManager.ResetScene();
     }
 
-    void OnKeyDown(EventContext context)
-    {
-        if (context.inputEvent.keyCode == KeyCode.Escape)
-        {
-            Application.Quit();
-        }
-    }
 }
